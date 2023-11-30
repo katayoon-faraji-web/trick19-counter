@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        .txt1,.txt2{
+            font-family: cursive;
+            font-size: 50px;
+        }
+        .txt1{
+            color: rgb(17, 17, 104);
+        }
+        .btn{
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            margin: 10px;
+            font-family: cursive;
+            font-size: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="row"><h2 class="txt1">COUNTER</h2></div>
+        <div class="row"><strong class="txt2">0</strong></div>
+        <div class="row">
+            <button class="btn" onclick="clck('-')">DECREASE</button>
+            <button class="btn" onclick="clck('reset')">RESET</button>
+            <button class="btn" onclick="clck('+')">INCREASE</button>
+        </div>
+    </section>
+
+    <script>
+        let y = 0;
+        function clck(x){
+            switch(x){
+                case '-':
+                    y--;
+                    break;
+                case '+':
+                    y++;
+                    break;
+                case 'reset':
+                    y = 0;
+                    break;
+            }
+            document.getElementsByClassName('txt2')[0].innerText = y;
+            let colour = clr(y);
+            document.getElementsByClassName('txt2')[0].style.color = colour;
+            
+        }
+        function clr(x){
+            let colour =''
+            if(x>0){
+                colour = 'green'
+            }
+            else if(x<0){
+                colour = 'red'
+            }
+            else{
+                colour = 'black'
+            }
+            return colour
+        }
+    </script>
+
+    
+    
+</body>
+</html>
