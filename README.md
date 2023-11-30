@@ -1,5 +1,5 @@
 # trick19-counter
-- [Demo Project](https://katayoon-faraji-web.github.io/tricj18-backgroundColor/)
+- [Demo Project](https://katayoon-faraji-web.github.io/trick19-counter/)
 
 - Developed by katayoon faraji
 
